@@ -1,10 +1,10 @@
 :root{
-  --bg:		#C1D5C1;
+  --bg:		#FAF8F1;
   --muted:#FFFACD;
   --text:#000000;
-  --card:#E5E4E2;
-  --accent:			#006400;
-  --accent-2:	#9CAF9C;
+  --card:#ffffff;
+  --accent:			#334443;
+  --accent-2:	#FAEAB1;
 }
 *{ box-sizing:border-box; }
 html,body{ margin:0; padding:0; }
@@ -13,10 +13,11 @@ body{
   background: var(--bg);
   color:var(--text);
   line-height:1.6;
+  font-size: 18px;
 }
-.section{ padding:72px 20px; max-width: 1100px; margin: 0 auto; }
+.section{ padding:0px 20px; max-width: 100%; margin: 0 auto; border-top: none;}
 h1,h2,h3{ margin:0 0 12px; line-height:1.2; }
-h2{ font-size: 32px; margin-bottom: 24px; }
+h2{ font-size: 38px; margin-bottom: 24px; }
 p{ margin: 0 0 12px; color:var(--text); }
 a{ color: var(--accent); text-decoration: none;} 
 a:hover{ text-decoration: underline; }
@@ -25,16 +26,16 @@ a:hover{ text-decoration: underline; }
   background: VAR(--accent-2); backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(1, 65, 0, 0.107);
 }
-.nav{ display:flex; align-items:center; justify-content: space-between; max-width:1100px; margin:0 auto; padding:14px 20px;}
+.nav{ display:flex; align-items:center; justify-content: space-between; max-width:100%; margin:0 auto; padding:14px 20px;}
 .logo{ font-weight:800; letter-spacing:.2px;}
 .nav-links{ list-style:none; display:flex; gap:18px; margin:0; padding:0; }
 .nav-links a{ padding:8px 10px; border-radius: 10px; }
 .nav-links a:hover{ background: rgba(255,255,255,0.06); text-decoration:none; }
 .nav-toggle{ display:none; background:transparent; color:var(--text); border:1px solid rgba(255,255,255,0.2); padding:6px 10px; border-radius:8px; }
 .hero{
-  padding: 96px 20px 72px; text-align:center; max-width: 900px; margin: 0 auto;
+  padding: 96px 20px 72px; text-align:center; max-width: 100%; margin: 0 auto;
 }
-.hero h1{ font-size: 40px; font-weight: 800; }
+.hero h1{ font-size: 48px; font-weight: 800;}
 .accent{ color: var(--accent); }
 .btn{
   display:inline-block; margin-top:18px; padding:12px 18px; border-radius:12px;
@@ -51,7 +52,7 @@ a:hover{ text-decoration: underline; }
   border-radius:16px; padding:18px;
   transition: transform .12s ease, box-shadow .2s ease, background .2s ease;
 }
-.card:hover{ transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,.25); background: #172042; }
+.card:hover{ transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,.25); background: var(--accent-2); }
 .card h3{ margin-bottom:6px; }
 .link{ margin-right:10px; }
 .contact-form{ max-width:720px; margin: 0 auto; }
@@ -77,4 +78,36 @@ textarea{ min-height: 140px; resize: vertical; }
   .nav-links{ display:none; position:absolute; right:20px; top:56px; flex-direction:column; background: rgba(14,21,48,.98); padding:12px; border-radius:12px; border:1px solid rgba(255,255,255,0.08); }
   .nav-links.open{ display:flex; }
   git status
+}
+
+/* 가로정렬 */
+.about-projects-wrapper {
+    display: flex; 
+    width: 100%; 
+    max-width: 100%; 
+    margin: 0 auto; 
+    gap: 25px; 
+    padding: 72px 20px;
+}
+.about-projects-wrapper .section {
+    flex: 1; /* 두 섹션이 공간을 균등하게 나눕니다. */
+    
+    /* 🌟 네모 상자 디자인 적용 🌟 */
+    background-color: #f7f5d23d; /* 예시: var(--muted)를 사용하여 배경색 지정 */
+    border-radius: 16px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* 은은한 입체감 */
+    
+    /* 🌟 상자 내부의 여백 설정 (콘텐츠가 테두리에서 떨어지도록) 🌟 */
+    padding: 30px; 
+}
+.section-divider {
+    border: none;
+    height: 0;
+    
+    /* 사용자가 원했던 점선 스타일 (기존 .section의 border-top 스타일 활용) */
+    border-top: 2px dashed #43232336; 
+    width: 100%;
+    
+    /* 🌟 이 코드가 윗 섹션과 아랫 섹션을 72px 간격으로 분리합니다. 🌟 */
+    margin: 72px auto; 
 }
