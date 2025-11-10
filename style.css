@@ -56,7 +56,7 @@ a:hover{ text-decoration: underline; }
     flex-wrap: wrap; 
     gap: 8px; 
     font-size: 13px;
-    display: flex; 
+    /*display: flex; 가로*/
 }
 .grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:16px; }
 .card{
