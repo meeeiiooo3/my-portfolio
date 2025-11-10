@@ -49,14 +49,15 @@ a:hover{ text-decoration: underline; }
 .avatar{ width:160px; height:160px; object-fit:cover; border-radius:50%; border:3px solid rgba(255,255,255,0.15); }
 .tags{ display:flex; flex-wrap:wrap; gap:8px; margin: 12px 0 0; padding:0; list-style:none; }
 .tags li{ background: VAR(--accent-2); padding:6px 10px; border-radius:999px; color:var(--text);}
+.tech-tags {
+    list-style: none !important; 
+    padding-left: 0 !important; 
+    margin: 12px 0 12px 0; 
+}
 .tech-tags li {
-    list-style: none; 
-    padding-left: 0; 
-    margin: 12px 0; 
-    flex-wrap: wrap; 
-    gap: 8px; 
-    font-size: 15px;
-  }
+    display: block; 
+    width: fit-content;
+}
 .grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:16px; }
 .card{
   background: var(--accent-2); border:1px solid rgba(255,255,255,0.08);
