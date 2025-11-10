@@ -55,7 +55,7 @@ a:hover{ text-decoration: underline; }
     margin: 12px 0; 
     flex-wrap: wrap; 
     gap: 8px; 
-    font-size: 14px;
+    font-size: 15px;
     /*display: flex; 가로*/
 }
 .grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:16px; }
